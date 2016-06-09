@@ -63,13 +63,13 @@ cov: test
 lint: *.c *.h lint_cmac.h gcc-include-path.lnt size-options.lnt
 	@lint std.lnt co-gcc.lnt *.c
 
-lint_cmac.h: config.mk
+lint_cmac.h: config_linux.mk config_osx.mk
 	@make -s -f co-gcc.mak lint_cmac.h
 
-gcc-include-path.lnt: config.mk
+gcc-include-path.lnt: config_linux.mk config_osx.mk
 	@make -s -f co-gcc.mak gcc-include-path.lnt
 
-size-options.lnt: config.mk
+size-options.lnt: config_linux.mk config_osx.mk
 	@make -s -f co-gcc.mak size-options.lnt
 
 .PHONY: all options clean test

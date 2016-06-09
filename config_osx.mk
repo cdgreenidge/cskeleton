@@ -6,4 +6,4 @@ CFLAGS += -g -coverage -MD -MP \
 		  -fPIC  # Do not remove this flag
 
 # Make VALGRIND empty to run tests without valgrind
-VALGRIND=
+VALGRIND =

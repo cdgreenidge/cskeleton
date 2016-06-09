@@ -10,4 +10,4 @@ CFLAGS += -g -coverage -MD -MP \
 		  -Wredundant-decls -Wshadow -Wwrite-strings -Wno-unknown-pragmas \
 
 # Make VALGRIND empty to run tests without valgrind
-VALGRIND = valgrind -q
+VALGRIND = 
