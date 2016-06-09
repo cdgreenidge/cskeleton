@@ -4,6 +4,8 @@
     [Released under MIT License. Please refer to license.txt for details]
 ========================================== */
 
+#pragma clang system_header
+
 #ifndef UNITY_INTERNALS_H
 #define UNITY_INTERNALS_H
 

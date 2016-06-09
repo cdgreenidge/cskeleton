@@ -1,0 +1,7 @@
+*.d
+*.gcda
+*.gcno
+*.gcov
+*.o
+*.so
+test_hello

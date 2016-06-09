@@ -7,7 +7,7 @@ CFLAGS += -g -coverage -MD -MP \
 		  -Wconversion -Wdeclaration-after-statement -Wfloat-equal \
 		  -Winit-self -Wmissing-declarations -Wmissing-prototypes \
 		  -Wnested-externs -Wold-style-definition -Wpacked -Wpointer-arith \
-		  -Wredundant-decls -Wshadow -Wwrite-strings \
+		  -Wredundant-decls -Wshadow -Wwrite-strings -Wno-unknown-pragmas \
 		  -fPIC  # Do not remove this flag
 
 # Make VALGRIND empty to run tests without valgrind
