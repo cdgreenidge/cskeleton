@@ -1,4 +1,14 @@
-include config.mk
+ifeq ($(OS), Windows_NT)
+	include config_windows.mk
+else
+	UNAME_S = $(shell uname -s)
+	ifeq ($(UNAME_S), Linux)
+		include config_linux.mk
+	endif
+	ifeq ($(UNAME_S), Darwin)
+		include config_osx.mk
+	endif
+endif
 
 SRC  = hello.c
 OBJ  = $(SRC:.c=.o)
