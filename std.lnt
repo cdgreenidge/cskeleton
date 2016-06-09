@@ -1,0 +1,11 @@
++fnr
++fpn
++fsc
+-passes(6)
+-strong(AJX)
+-v
+-w3
+
+// Mark the Unity test framework as a library
++libh(unity.h, unity_internals.h)
++libm(unity.c)

@@ -1,0 +1,13 @@
+language: c
+script: make all cov
+
+os:
+    - linux
+    - osx
+
+compiler:
+    - gcc
+    - clang
+
+after_success:
+    - curl https://codecov.io/bash | bash -s -- -X gcov 
