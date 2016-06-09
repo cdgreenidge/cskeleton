@@ -41,7 +41,7 @@ mylib.so: $(OBJ)
 
 test: $(TEST)
 
-test_hello: unity.o unity.h hello.o test_hello.o
+test_hello: unity.o hello.o test_hello.o
 	@echo LINK $@
 	@$(CC) $(CFLAGS) $^ -o $@
 	./$@
