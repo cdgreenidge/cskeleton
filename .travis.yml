@@ -1,13 +1,21 @@
 language: c
-script: make all cov
 
 os:
     - linux
     - osx
 
+addons:
+  apt:
+    packages:
+    - valgrind
+
 compiler:
     - gcc
     - clang
+
+script: 
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make VALGRIND= all cov; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make all cov; fi
 
 after_success:
     - curl https://codecov.io/bash | bash -s -- -X gcov 

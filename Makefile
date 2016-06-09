@@ -44,7 +44,7 @@ test: $(TEST)
 test_hello: unity.o hello.o test_hello.o
 	@echo LINK $@
 	@$(CC) $(CFLAGS) $^ -o $@
-	./$@
+	@$(VALGRIND) ./$@
 
 cov: test
 	gcov $(SRC)

@@ -12,6 +12,3 @@ CFLAGS += -g -coverage -MD -MP \
 
 # Make VALGRIND empty to run tests without valgrind
 VALGRIND = valgrind -q
-
-# compiler and linker
-CC = cc
