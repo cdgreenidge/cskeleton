@@ -1,0 +1,8 @@
+environment:
+    CC: gcc
+
+install:
+    - SET PATH=%PATH%;C:\MinGW\bin
+
+build_script:
+    - mingw32-make VALGRIND= all test
