@@ -1,10 +1,17 @@
-+fnr
-+fpn
-+fsc
--passes(6)
--strong(AJX)
--v
--w3
+-v              // Be less noisy
+-w3             // Highest warning level
++fnr            // Any pointer returned by any function can be NULL 
++fpn            // Warn about use of pointer paramters without NULL check
++fsc            // Assume string constants are const char*
+-passes(6)      // Do 6 passes to catch ripple effects
+-strong(AJX)    // All typedefs must match exactly
+
++e9??           // Enable all informational notes without turning on MISRA mode
+-e900           // Completion message
+-e960           // Special MISRA messages
+-e966           // Unused indirectly included header files
+-e970           // Non-typedef'ed types
+-e974           // Function stack usage
 
 // Mark the Unity test framework as a library
 +libh(unity.h, unity_internals.h)

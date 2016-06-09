@@ -5,3 +5,6 @@
 *.o
 *.so
 test_hello
+gcc-include-path.lnt
+lint_cmac.h
+size-options.lnt

@@ -61,7 +61,7 @@ cov: test
 
 # The following targets require Gimpel Software's FlexeLint
 lint: *.c *.h lint_cmac.h gcc-include-path.lnt size-options.lnt
-	@lint std.lnt co-gcc.lnt *.c
+	@lint co-gcc.lnt std.lnt *.c
 
 lint_cmac.h: config_linux.mk config_osx.mk
 	@make -s -f co-gcc.mak lint_cmac.h
